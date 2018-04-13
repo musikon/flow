@@ -1,0 +1,36 @@
+[ignore]
+./config/*
+./dist/*
+./node_modules/*
+./vendor/*
+
+[include]
+./app/
+./tests/
+
+[libs]
+./config/flow/CSSModule.js
+./config/flow/flow-typed
+
+[options]
+module.system.node.resolve_dirname=node_modules
+
+module.name_mapper='^~' -> '<PROJECT_ROOT>/app'
+module.name_mapper='^actions' -> '<PROJECT_ROOT>/app/actions'
+module.name_mapper='^assets' -> '<PROJECT_ROOT>/app/assets'
+module.name_mapper='^components' -> '<PROJECT_ROOT>/app/components'
+module.name_mapper='^config' -> '<PROJECT_ROOT>/app/config'
+module.name_mapper='^constants' -> '<PROJECT_ROOT>/app/constants'
+module.name_mapper='^containers' -> '<PROJECT_ROOT>/app/containers'
+module.name_mapper='^pages' -> '<PROJECT_ROOT>/app/pages'
+module.name_mapper='^reducers' -> '<PROJECT_ROOT>/app/reducers'
+module.name_mapper='^store' -> '<PROJECT_ROOT>/app/store'
+module.name_mapper='^types' -> '<PROJECT_ROOT>/app/types'
+
+module.name_mapper='.*\.\(scss|sass\)' -> 'CSSModule'
+
+module.file_ext=.js
+module.file_ext=.jsx
+module.file_ext=.json
+module.file_ext=.css
+module.file_ext=.sass

@@ -1,0 +1,116 @@
+{
+  "name": "webpack-react-skeleton",
+  "version": "0.3.5",
+  "description": "",
+  "main": "",
+  "author": "Dmitry Ruban <dkruban@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RuBAN-GT/webpack-react-skeleton"
+  },
+  "license": "ISC",
+  "keywords": [
+    "skeleton",
+    "es2015",
+    "flow",
+    "react",
+    "redux",
+    "react-router-redux"
+  ],
+  "scripts": {
+    "start": "better-npm-run start-dev",
+    "watch": "NODE_ENV=production webpack --watch --progress --verbose --colors",
+    "build": "NODE_ENV=production webpack --progress --colors",
+    "eslint": "eslint 'app/**/*.js*'",
+    "eslint:fix": "eslint --fix 'app/**/*.js*'",
+    "flow:report": "flow-coverage-report",
+    "precommit": "lint-staged",
+    "prettier": "prettier 'app/**.js*'",
+    "prettier:write": "preyarnttier --write 'app/**/*.js*'",
+    "test": "jest",
+    "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --watchAll --runInBand",
+    "test:watch": "jest --watchAll"
+  },
+  "betterScripts": {
+    "start-dev": {
+      "command": " webpack-dev-server",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  },
+  "lint-staged": {
+    "app/**/*.js*": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.2.5",
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^8.2.1",
+    "babel-jest": "^22.0.6",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-flow-runtime": "^0.15.0",
+    "babel-plugin-module-resolver": "^3.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "css-loader": "^0.28.8",
+    "enzyme": "^3.2.0",
+    "enzyme-to-json": "^3.2.2",
+    "eslint": "^4.15.0",
+    "eslint-config-prettier": "^2.7.0",
+    "eslint-import-resolver-babel-module": "^4.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-flowtype": "^2.41.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-react": "^7.4.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "flow-bin": "^0.63.1",
+    "flow-coverage-report": "^0.4.0",
+    "html-webpack-harddisk-plugin": "^0.1.0",
+    "html-webpack-plugin": "^2.28.0",
+    "husky": "^0.14.3",
+    "isomorphic-fetch": "^2.2.1",
+    "jest": "^22.0.6",
+    "lint-staged": "^6.0.0",
+    "lodash": "^4.17.4",
+    "node-sass": "^4.7.1",
+    "postcss-loader": "^2.0.10",
+    "prettier": "^1.10.2",
+    "react-hot-loader": "^4.0.0-beta.11",
+    "rimraf": "^2.6.1",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.19.0",
+    "uglify-js": "^3.3.5",
+    "uglifyjs-webpack-plugin": "^1.1.6",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.10.1",
+    "webpack-merge": "^4.1.1"
+  },
+  "dependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "better-npm-run": "^0.1.0",
+    "flow-runtime": "^0.16.0",
+    "global": "^4.3.2",
+    "history": "^4.6.3",
+    "prop-types": "^15.6.0",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-redux": "^5.0.4",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.8",
+    "redux": "^3.6.0",
+    "redux-devtools-extension": "^2.13.1",
+    "redux-thunk": "^2.2.0",
+    "semantic-ui-react": "^0.79.1"
+  }
+}
